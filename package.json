@@ -1,0 +1,28 @@
+{
+  "name": "zod-to-gemini-schema",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Convert a zod schema into a gemini function call parameter.",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [
+    "gemini",
+    "zod",
+    "openapi",
+    "schema"
+  ],
+  "author": "LQR471814",
+  "packageManager": "pnpm@9.2.0+sha512.98a80fd11c2e7096747762304106432b3ddc67dcf54b5a8c01c93f68a2cd5e05e6821849522a06fb76284d41a2660d5e334f2ee3bbf29183bf2e739b1dafa771",
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@google/generative-ai": "^0.12.0",
+    "@types/node": "^20.14.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
