@@ -1,11 +1,21 @@
 {
   "name": "zod-to-gemini-schema",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convert a zod schema into a gemini function call parameter.",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/src/index.d.ts",
+  "files": [
+    "./dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "test": "vitest run",
     "build": "tsup",
