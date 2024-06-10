@@ -3,8 +3,12 @@
   "type": "module",
   "version": "0.1.0",
   "description": "Convert a zod schema into a gemini function call parameter.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "build": "tsup"
   },
   "keywords": [
     "gemini",
@@ -20,6 +24,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@google/generative-ai": "^0.12.0",
+    "@microsoft/api-extractor": "^7.47.0",
     "@types/node": "^20.14.2",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5",

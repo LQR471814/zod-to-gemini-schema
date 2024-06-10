@@ -16,5 +16,12 @@
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noExplicitAny": "off"
+      }
+    }
   }
 }

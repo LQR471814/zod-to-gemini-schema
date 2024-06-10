@@ -24,11 +24,11 @@ function removeUndefinedKeysRecursively(t: unknown) {
 
   if (typeof t === "object" && t) {
     for (const key in t) {
-      if (t[key] === undefined) {
-        delete t[key]
+      if ((t as any)[key] === undefined) {
+        delete (t as any)[key]
         continue
       }
-      removeUndefinedKeysRecursively(t[key])
+      removeUndefinedKeysRecursively((t as any)[key])
     }
     return
   }
@@ -53,7 +53,7 @@ function removeEmptyRequired(t: unknown) {
       delete (t as any).required
     }
     for (const key in t) {
-      removeEmptyRequired(t[key])
+      removeEmptyRequired((t as any)[key])
     }
     return
   }

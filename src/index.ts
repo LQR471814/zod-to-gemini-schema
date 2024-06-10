@@ -196,10 +196,10 @@ export function unwrapObject(value: unknown): unknown {
   if (typeof value === "object" && value) {
     const keys = Object.keys(value)
     if (keys.length === 1 && keys[0] === WRAPPED_VALUE_KEY) {
-      return unwrapObject(value[keys[0]])
+      return unwrapObject((value as any)[keys[0]])
     }
     for (const key in value) {
-      value[key] = unwrapObject(value[key])
+      (value as any)[key] = unwrapObject((value as any)[key])
     }
     return value
   }
